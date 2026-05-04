@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Subway Surfers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a44, #fc6076);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated Background Elements */
+        .bg-shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 10s infinite linear;
+        }
+
+        .shape1 { width: 300px; height: 300px; top: -50px; left: -50px; animation-duration: 15s; }
+        .shape2 { width: 500px; height: 500px; bottom: -100px; right: -100px; animation-duration: 20s; animation-direction: reverse; }
+
+        @keyframes float {
+            0% { transform: rotate(0deg) translate(0, 0); }
+            50% { transform: rotate(180deg) translate(50px, 50px); }
+            100% { transform: rotate(360deg) translate(0, 0); }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            position: relative;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            transform: translateY(0);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, #ffd700, #ff8c00);
+            border-radius: 30px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(255, 140, 0, 0.4);
+            transform: rotate(-5deg);
+        }
+
+        .logo-placeholder span {
+            font-family: 'Lilita One', cursive;
+            font-size: 40px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-family: 'Lilita One', cursive;
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(0, 114, 255, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 114, 255, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 114, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 114, 255, 0); }
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 114, 255, 0.5);
+        }
+
+        .download-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
+        }
+
+        .download-btn:hover::after {
+            left: 100%;
+        }
+        
+        .version-info {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Animations -->
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+
+    <div class="card">
+        <div class="logo-placeholder">
+            <span>SS</span>
+        </div>
+        <h1>Subway Surfers</h1>
+        <p>Dash as fast as you can! Dodge the oncoming trains and help Jake, Tricky & Fresh escape from the grumpy Inspector and his dog.</p>
+        
+        <!-- REPLACE 'YOUR_LINK_HERE' WITH YOUR ACTUAL WEBSITE URL -->
+        <a href="YOUR_LINK_HERE" class="download-btn" target="_blank">Download Now</a>
+        
+        <div class="version-info">Latest Version • Free for PC & Mobile</div>
+    </div>
+
+</body>
+</html>
